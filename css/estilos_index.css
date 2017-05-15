@@ -11,6 +11,12 @@ body{
   margin-right: auto;
 }
 
+#contenido{
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 header{
   background-color: #5b7989;
   width: auto;
@@ -32,7 +38,7 @@ header nav a:link, header nav a:visited {
 		padding: 0.5em 0.5em;
 		text-decoration: underline;
 		color: white;
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 
 header nav .inicio:link, header nav .inicio:visited {
@@ -67,7 +73,7 @@ header nav{
   margin: 0 auto;
 }
 
-#imagen-central{
+#imagen-central figure{
   background-color: #82c3a6;
   width: 100%;
   margin: 0;
@@ -76,12 +82,71 @@ header nav{
   vertical-align: middle;
 }
 
-.central{
+.foto-central{
   background-color: none;
-  padding: 2% 5%;
+  padding: 1%;
   width: 90%
 }
 
+#imagen-secundaria{
+  background-color: #d5c75f;
+  border: 1px;
+  width: 100%;
+  margin: 0;
+  display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+#imagen-secundaria figure{
+  box-sizing:border-box;
+  width: 50%;
+  margin: 0;
+  padding: 2%;
+  color: black;
+  font-size: 2em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.paisajes, .retratos{
+  background-color: none;
+  padding: 1%;
+  width: 90%
+}
+
+@keyframes paisajes-animacion {
+  from{
+    -ms-transform: rotate(10deg);
+  	-webkit-transform: rotate(10deg);
+  	transform: rotate(10deg);
+  }
+  to{
+    -ms-transform: rotate(-10deg);
+  	-webkit-transform: rotate(-10deg);
+  	transform: rotate(-10deg);
+  }
+}
+
+.paisajes:hover{
+  animation: paisajes-animacion 2s;
+  box-shadow: 2px 2px #82c3a6;
+}
+
+@keyframes retratos-animacion {
+  from{
+    transform: translate3d(20px, -5px, 0px);
+  }
+  to{
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+
+.retratos:hover{
+  animation: retratos-animacion 2s;
+  box-shadow: 2px 2px #82c3a6;
+}
 
 footer{
   background-color: #C6d5c5;
@@ -91,16 +156,17 @@ footer{
   border-radius: 0px 0px 10px 10px;
   -moz-border-radius: 0px 0px 10px 10px;
   -webkit-border-radius: 0px 0px 10px 10px;
-  box-sizing:border-box;
   display: -webkit-flex;
-	display: flex;
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 footer aside{
   width: 25%;
   color: black;
+  margin: 10;
+  padding: 10;
   font-size: 1em;
   text-align: left;
 }
@@ -112,7 +178,7 @@ footer aside{
 aside ul{
   list-style-type: none;
   margin: 10px;
-  padding: 10px;
+  padding: 0px;
 }
 
 aside ul li{
@@ -139,6 +205,12 @@ footer aside a:link, footer aside a:visited {
   header nav{
     width: fit-content; /*Fuerza el centrado del nav*/
     margin: 0 auto;
+  }
+  #imagen-secundaria figure{
+    box-sizing:border-box;
+    width: 100%;
+    margin: 0;
+    padding: 2%;
   }
   footer aside{
     width: 100%;
