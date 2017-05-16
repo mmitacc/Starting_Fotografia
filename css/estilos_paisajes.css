@@ -56,7 +56,7 @@ header nav a:link, header nav a:visited {
     font-size: 1.3em;
 }
 
-header nav .inicio:link, header nav .inicio:visited {
+header nav .paisajes:link, header nav .paisajes:visited {
 		text-decoration: none;
 }
 
@@ -104,7 +104,7 @@ header nav{
   box-shadow: 2px 2px #02010a;
 }
 
-#imagen-secundaria{
+#galeria-paisajes{
   background-color: #d5c75f;
   border: 1px;
   width: 100%;
@@ -115,9 +115,9 @@ header nav{
 	flex-flow: row wrap;
 }
 
-#imagen-secundaria figure{
+#galeria-paisajes figure{
   box-sizing:border-box;
-  width: 50%;
+  width: 33.3%;
   margin: 0;
   padding: 2%;
   color: black;
@@ -126,43 +126,26 @@ header nav{
   vertical-align: middle;
 }
 
-.fpaisajes, .fretratos{
+.p1, .p2, .p3, .p4, .p5, .p6{
   background-color: none;
   padding: 1%;
   width: 90%;
   box-shadow: 2px 2px #02010a;
 }
 
-@keyframes paisajes-animacion {
-  from{
-    -ms-transform: rotate(10deg);
-  	-webkit-transform: rotate(10deg);
-  	transform: rotate(10deg);
-  }
-  to{
-    -ms-transform: rotate(-10deg);
-  	-webkit-transform: rotate(-10deg);
-  	transform: rotate(-10deg);
-  }
+.p1{
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
 }
 
-.fpaisajes:hover{
-  animation: paisajes-animacion 2s;
-  box-shadow: 2px 2px #82c3a6;
+.p3{
+  -webkit-filter: sepia(90%);
+  filter: sepia(90%);
 }
 
-@keyframes retratos-animacion {
-  from{
-    transform: translate3d(20px, -5px, 0px);
-  }
-  to{
-    transform: translate3d(0px, 0px, 0px);
-  }
-}
-
-.fretratos:hover{
-  animation: retratos-animacion 2s;
-  box-shadow: 2px 2px #82c3a6;
+.p2, .p4, .p6{
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 footer{
@@ -227,7 +210,7 @@ footer aside a:link, footer aside a:visited {
     width: fit-content; /*Fuerza el centrado del nav*/
     margin: 0 auto;
   }
-  #imagen-secundaria figure{
+  #galeria-paisajes figure{
     box-sizing:border-box;
     width: 100%;
     margin: 0;
