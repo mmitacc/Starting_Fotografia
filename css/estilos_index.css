@@ -11,24 +11,23 @@ body{
   margin-right: auto;
 }
 
+@-webkit-keyframes slide{
+  0%{
+  margin-top: 150%;
+  }60%{
+  margin-top: -5%;
+  }100%{
+  margin-top: 0%;
+  }
+}
+
 #contenido{
   width: 900px;
   margin-left: auto;
   margin-right: auto;
+  -webkit-animation: slide 1s forwards;
+  animation: slide 1s forwards;
 }
-
-/*@keyframes slidein {
-  0% {
-
-    margin-top: 150%;
-  }
-  60% {
-    margin-top: -5%;
-  }
-  100% {
-    margin-top: 0%;
-  }
-}*/
 
 header{
   background-color: #5b7989;
@@ -43,8 +42,6 @@ header{
 	-webkit-flex-flow: row wrap;
 	flex-flow: row wrap;
   overflow: hidden;
-  /*animation: slidein, 5s;*/
-
 }
 
 header nav a:link, header nav a:visited {
@@ -133,7 +130,7 @@ header nav{
   box-shadow: 2px 2px #02010a;
 }
 
-@keyframes paisajes-animacion {
+@-webkit-keyframes paisajes-animacion {
   from{
     -ms-transform: rotate(10deg);
   	-webkit-transform: rotate(10deg);
@@ -151,7 +148,7 @@ header nav{
   box-shadow: 2px 2px #82c3a6;
 }
 
-@keyframes retratos-animacion {
+@-webkit-keyframes retratos-animacion {
   from{
     transform: translate3d(20px, -5px, 0px);
   }
