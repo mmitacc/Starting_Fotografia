@@ -1,0 +1,219 @@
+@@font-face {
+  font-family: 'Dancing Script';
+}
+
+body{
+  font-family: 'Dancing Script';
+  font-weight: bold;
+  background-color: #02010a;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@-webkit-keyframes slide{
+  0%{
+  margin-top: 150%;
+  }60%{
+  margin-top: -5%;
+  }100%{
+  margin-top: 0%;
+  }
+}
+
+#contenido{
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-animation: slide 1s forwards;
+  animation: slide 1s forwards;
+}
+
+header{
+  background-color: #5b7989;
+  width: auto;
+  padding: 0px 10px;
+  align-items: center;
+  border-radius: 10px 10px 0px 0px;
+  -moz-border-radius: 10px 10px 0px 0px;
+  -webkit-border-radius: 10px 10px 0px 0px;
+  display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+  overflow: hidden;
+}
+
+header nav a:link, header nav a:visited {
+		display: inline-block;
+		height: 30px;
+		padding: 0.5em 0.5em;
+		text-decoration: underline;
+		color: white;
+    font-size: 1.3em;
+}
+
+header nav .retratos:link, header nav .retratos:visited {
+		text-decoration: none;
+}
+
+header h1{
+  background-color: none;
+  font-size: 2em;
+  color: white;
+  text-shadow: 2px 2px #02010a;
+  float: left;
+  padding: 0;
+  width: 50%;
+}
+
+header nav{
+  height: 100%;
+  width: 50%;
+}
+
+.indice{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.indice li{
+  float: right;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+#imagen-central figure{
+  background-color: #82c3a6;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.foto-central{
+  background-color: none;
+  padding: 1%;
+  width: 95%;
+  box-shadow: 2px 2px #02010a;
+}
+
+#galeria-retratos{
+  background-color: #d5c75f;
+  border: 1px;
+  width: 100%;
+  margin: 0;
+  display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+#galeria-retratos figure{
+  box-sizing:border-box;
+  width: 33.3%;
+  margin: 0;
+  padding: 2%;
+  color: black;
+  font-size: 2em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.r1, .r2, .r3, .r4, .r5, .r6{
+  background-color: none;
+  padding: 1%;
+  width: 90%;
+  box-shadow: 2px 2px #02010a;
+}
+
+.r1{
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+
+.r3{
+  -webkit-filter: sepia(90%);
+  filter: sepia(90%);
+}
+
+.r2, .r4, .r6{
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+footer{
+  background-color: #C6d5c5;
+  width: auto;
+  padding: 10px 10px;
+  margin: 0;
+  border-radius: 0px 0px 10px 10px;
+  -moz-border-radius: 0px 0px 10px 10px;
+  -webkit-border-radius: 0px 0px 10px 10px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+footer aside{
+  width: 25%;
+  color: black;
+  margin: 10;
+  padding: 10;
+  font-size: 1em;
+  text-align: left;
+}
+
+.columnas-footer{
+  font-size: 1.3em;
+}
+
+aside ul{
+  list-style-type: none;
+  margin: 10px;
+  padding: 0px;
+}
+
+aside ul li{
+  padding-bottom: 10px;
+}
+
+#redes-sociales img{
+  width: 20px;
+  vertical-align: bottom;
+}
+
+footer aside a:link, footer aside a:visited {
+		display: inline-block;
+		text-decoration: underline;
+		color: black;
+    font-size: 1em;
+}
+
+@media (max-width:900px) {
+  #contenido{
+    width: auto;
+  }
+
+  header h1, header nav{
+    width: 100%;
+    text-align: center;
+  }
+  header nav{
+    width: fit-content; /*Fuerza el centrado del nav*/
+    margin: 0 auto;
+  }
+  #galeria-retratos figure{
+    box-sizing:border-box;
+    width: 100%;
+    margin: 0;
+    padding: 2%;
+  }
+  footer aside{
+    width: 100%;
+  }
+}
